@@ -1,0 +1,435 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"CustomLabels.plt"'
+$!VarSet |LFDSVL1| = '"Month" "Y"'
+$!SetStyleBase Factory
+$!CreateColorMap 
+  Name = 'Two Color__modified (2)'
+  NumControlPoints = 3
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 0
+      G = 0
+      B = 255
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.5016
+    LeadRGB
+      {
+      R = 127
+      G = 0
+      B = 127
+      }
+    TrailRGB
+      {
+      R = 127
+      G = 0
+      B = 127
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    A3
+      {
+      Width = 11.693
+      Height = 16.535
+      }
+    A4
+      {
+      Width = 8.2677
+      Height = 11.693
+      }
+    Custom1
+      {
+      Width = 9
+      Height = 11
+      TopHardClipOffset = 1.53
+      BottomHardClipOffset = 1.63
+      }
+    Custom2
+      {
+      Width = 11
+      Height = 8.5
+      LeftHardClipOffset = 1
+      RightHardClipOffset = 1
+      TopHardClipOffset = 1
+      BottomHardClipOffset = 1
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = -0.05
+      Y1 = -0.05
+      X2 = 11.05
+      Y2 = 8.55
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 0
+    Y = 0
+    }
+  Width = 11
+  Height = 8.5
+$!PlotType  = XYLine
+$!FrameName  = 'Multiple XY Zone Data'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-2]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    Box
+      {
+      BoxType = Filled
+      Color = Custom2
+      }
+    XYPos
+      {
+      X = 29.763
+      Y = 87.903
+      }
+    AnchorAlignment = TopLeft
+    }
+$!LineMap  [1]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Custom7
+    LineThickness = 0.4
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    YAxis = 2
+    }
+  Lines
+    {
+    Color = Red
+    LineThickness = 0.4
+    }
+  Symbols
+    {
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    }
+  Symbols
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 2
+    YAxis = 3
+    }
+  Lines
+    {
+    Color = Cyan
+    }
+  Symbols
+    {
+    Color = Cyan
+    FillColor = Cyan
+    }
+  BarCharts
+    {
+    Color = Cyan
+    FillColor = Cyan
+    }
+  ErrorBars
+    {
+    Color = Cyan
+    }
+$!LineMap  [5]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 2
+    YAxis = 2
+    }
+  Lines
+    {
+    Color = Yellow
+    }
+  Symbols
+    {
+    Color = Yellow
+    FillColor = Yellow
+    }
+  BarCharts
+    {
+    Color = Yellow
+    FillColor = Yellow
+    }
+  ErrorBars
+    {
+    Color = Yellow
+    }
+$!LineMap  [6]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Purple
+    }
+  Symbols
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Name = '&ZN&'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    }
+  Symbols
+    {
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    RangeMin = 0.5
+    RangeMax = 12.201169809246064
+    AutoGrid = No
+    GRSpacing = 1
+    Ticks
+      {
+      NumMinOrTicks = 0
+      }
+    TickLabel
+      {
+      NumFormat
+        {
+        Formatting = CustomLabel
+        }
+      }
+    Title
+      {
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 20
+        }
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    RangeMin = 1
+    RangeMax = 3070.8489463867186
+    GRSpacing = 500
+    Title
+      {
+      TitleMode = UseText
+      Text = 'Concentration'
+      Color = Custom7
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 20
+        }
+      Offset = 8.62
+      }
+    }
+$!XYLineAxis 
+  YDetail 2
+    {
+    RangeMin = -0.2485380619764328
+    RangeMax = 446.89572313871832
+    GRSpacing = 50
+    Title
+      {
+      TitleMode = UseText
+      Text = 'Stress'
+      Color = Red
+      TextShape
+        {
+        IsBold = No
+        SizeUnits = Point
+        Height = 20
+        }
+      }
+    AxisLine
+      {
+      AxisAlignment = WithGridMax
+      }
+    }
+$!XYLineAxis 
+  YDetail 3
+    {
+    RangeMin = 150000
+    RangeMax = 400025
+    GRSpacing = 50000
+    AxisLine
+      {
+      AxisAlignment = WithGridMax
+      Offset = 3
+      }
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

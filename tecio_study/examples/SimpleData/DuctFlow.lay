@@ -1,0 +1,1713 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"DuctFlow.plt"'
+$!VarSet |LFDSVL1| = '"X(M)" "Y(M)" "Z(M)" "U(M/S)" "V(M/S)" "W(M/S)" "P(N/m2)" "T(K)"'
+$!SetStyleBase Factory
+$!CreateColorMap 
+  Name = 'Sequential - Viridis'
+  NumControlPoints = 11
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    TrailRGB
+      {
+      R = 68
+      G = 1
+      B = 84
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.08163
+    LeadRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    TrailRGB
+      {
+      R = 72
+      G = 31
+      B = 112
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 0.1837
+    LeadRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 67
+      G = 63
+      B = 133
+      }
+    }
+  ControlPoint 4
+    {
+    ColorMapFraction = 0.2857
+    LeadRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 54
+      G = 92
+      B = 141
+      }
+    }
+  ControlPoint 5
+    {
+    ColorMapFraction = 0.3878
+    LeadRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    TrailRGB
+      {
+      R = 43
+      G = 117
+      B = 142
+      }
+    }
+  ControlPoint 6
+    {
+    ColorMapFraction = 0.4898
+    LeadRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 142
+      B = 141
+      }
+    }
+  ControlPoint 7
+    {
+    ColorMapFraction = 0.5918
+    LeadRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    TrailRGB
+      {
+      R = 33
+      G = 166
+      B = 133
+      }
+    }
+  ControlPoint 8
+    {
+    ColorMapFraction = 0.6939
+    LeadRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    TrailRGB
+      {
+      R = 64
+      G = 189
+      B = 114
+      }
+    }
+  ControlPoint 9
+    {
+    ColorMapFraction = 0.7959
+    LeadRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    TrailRGB
+      {
+      R = 119
+      G = 209
+      B = 83
+      }
+    }
+  ControlPoint 10
+    {
+    ColorMapFraction = 0.898
+    LeadRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    TrailRGB
+      {
+      R = 186
+      G = 222
+      B = 40
+      }
+    }
+  ControlPoint 11
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    TrailRGB
+      {
+      R = 253
+      G = 231
+      B = 37
+      }
+    }
+$!CreateColorMap 
+  Name = 'Two Color__modified (2)'
+  NumControlPoints = 3
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 0
+      G = 0
+      B = 255
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.5016
+    LeadRGB
+      {
+      R = 127
+      G = 0
+      B = 127
+      }
+    TrailRGB
+      {
+      R = 127
+      G = 0
+      B = 127
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    A3
+      {
+      Width = 11.693
+      Height = 16.535
+      }
+    A4
+      {
+      Width = 8.2677
+      Height = 11.693
+      }
+    Custom1
+      {
+      Width = 9
+      Height = 11
+      TopHardClipOffset = 1.53
+      BottomHardClipOffset = 1.63
+      }
+    Custom2
+      {
+      Width = 11
+      Height = 8.5
+      LeftHardClipOffset = 1
+      RightHardClipOffset = 1
+      TopHardClipOffset = 1
+      BottomHardClipOffset = 1
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = -0.05
+      Y1 = -0.05
+      X2 = 11.05
+      Y2 = 8.55
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = Cartesian3D
+  IncludeText = No
+  IncludeGeom = No
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!RenameDataSetVar 
+  Var = 7
+  Name = 'P(N/m2)'
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  BackgroundColor = Black
+  HeaderColor = Red
+  XYPos
+    {
+    X = 0
+    Y = 0
+    }
+  Width = 11
+  Height = 8.5
+$!PlotType  = Cartesian3D
+$!FrameName  = '3D Flow'
+$!GlobalTime 
+  SolutionTime = 0
+$!ActiveFieldMaps  =  [1]
+$!GlobalRGB 
+  RangeMin = 0
+  RangeMax = 1
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+$!GlobalContour  1
+  Var = 8
+  ColorMapName = 'Sequential - Viridis'
+  DefNumLevels = 22
+  Labels
+    {
+    AutoLevelSkip = 3
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 80.532
+      Y = 32.545
+      }
+    OverlayBarGrid = No
+    TextColor = White
+    Box
+      {
+      BoxType = None
+      Color = White
+      FillColor = Black
+      }
+    LabelIncrement = 3.34E+004
+    }
+  ColorCutoff
+    {
+    RangeMin = 117.547224164
+    RangeMax = 340.413588881
+    }
+  ColorMapFilter
+    {
+    ColorMapDistribution = Continuous
+    ContinuousColor
+      {
+      CMin = 6.11404180527
+      CMax = 451.84677124
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 1
+  RawData
+22
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+220
+240
+260
+280
+300
+320
+340
+360
+380
+400
+420
+440
+$!GlobalContour  2
+  Var = 7
+  ColorMapName = 'Two Color__modified (2)'
+  DefNumLevels = 16
+  Labels
+    {
+    AutoLevelSkip = 3
+    Color = White
+    FillColor = Black
+    NumFormat
+      {
+      Formatting = Exponential
+      Precision = 2
+      }
+    }
+  Legend
+    {
+    Show = Yes
+    XYPos
+      {
+      X = 97.543
+      Y = 33.016
+      }
+    OverlayBarGrid = No
+    TextColor = White
+    Box
+      {
+      BoxType = None
+      Color = White
+      FillColor = Black
+      }
+    LabelIncrement = 3.34E+004
+    }
+  ColorCutoff
+    {
+    RangeMin = 86457.3304443
+    RangeMax = 253432.630981
+    }
+  ColorMapFilter
+    {
+    ColorMapDistribution = Continuous
+    ContinuousColor
+      {
+      CMin = 2969.68017578
+      CMax = 336920.28125
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 2
+  RawData
+16
+20000
+40000
+60000
+80000
+100000
+120000
+140000
+160000
+180000
+200000
+220000
+240000
+260000
+280000
+300000
+320000
+$!GlobalContour  3
+  Var = 4
+  ColorMapName = 'Modern'
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    LabelIncrement = 51.7
+    }
+  ColorCutoff
+    {
+    RangeMin = 135.674706817
+    RangeMax = 394.185717702
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 6.41920137405
+      CMax = 523.441223145
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 3
+  RawData
+10
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+$!GlobalContour  4
+  Var = 5
+  ColorMapName = 'GrayScale'
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+  ColorCutoff
+    {
+    RangeMin = -72.1295051575
+    RangeMax = 22.0131568909
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = -119.200836182
+      CMax = 69.084487915
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 4
+  RawData
+18
+-110
+-100
+-90
+-80
+-70
+-60
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+60
+$!GlobalContour  5
+  Var = 6
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+  ColorCutoff
+    {
+    RangeMin = -40.0466375351
+    RangeMax = 11.8107404709
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = -65.9753265381
+      CMax = 37.7394294739
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 5
+  RawData
+10
+-60
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+$!GlobalContour  6
+  Var = 8
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+  ColorCutoff
+    {
+    RangeMin = 117.547224164
+    RangeMax = 340.413588881
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 6.11404180527
+      CMax = 451.84677124
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 6
+  RawData
+8
+50
+100
+150
+200
+250
+300
+350
+400
+$!GlobalContour  7
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  8
+  Labels
+    {
+    Color = White
+    FillColor = Black
+    }
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    }
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalThreeDVector 
+  UVar = 4
+  VVar = 5
+  WVar = 6
+  RelativeLength = 0.00035
+  RefVector
+    {
+    Color = White
+    MagnitudeLabel
+      {
+      TextColor = White
+      }
+    }
+$!GlobalTwoDVector 
+  RefVector
+    {
+    Color = White
+    MagnitudeLabel
+      {
+      TextColor = White
+      }
+    }
+$!GlobalScatter 
+  Legend
+    {
+    TextColor = White
+    Box
+      {
+      Color = White
+      FillColor = Black
+      }
+    XYPos
+      {
+      X = 95
+      }
+    }
+  RefScatSymbol
+    {
+    Color = Red
+    FillColor = Red
+    }
+  DataLabels
+    {
+    Color = White
+    }
+$!Blanking 
+  Value
+    {
+    Constraint 1
+      {
+      Color = White
+      }
+    Constraint 2
+      {
+      Color = White
+      }
+    Constraint 3
+      {
+      Color = White
+      }
+    Constraint 4
+      {
+      Color = White
+      }
+    Constraint 5
+      {
+      Color = White
+      }
+    Constraint 6
+      {
+      Color = White
+      }
+    Constraint 7
+      {
+      Color = White
+      }
+    Constraint 8
+      {
+      Color = White
+      }
+    }
+$!FieldMap  [1]
+  Mesh
+    {
+    Color = Red
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Red
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Red
+    }
+  Scatter
+    {
+    Color = Red
+    FillColor = Black
+    }
+  Shade
+    {
+    Color = Custom29
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Custom1
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = ExposedCellFaces
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 70
+    }
+$!ThreeDAxis 
+  XDetail
+    {
+    VarNum = 1
+    }
+  YDetail
+    {
+    VarNum = 2
+    }
+  ZDetail
+    {
+    VarNum = 3
+    }
+$!View Fit
+$!ThreeDAxis 
+  AxisMode = XYZDependent
+  XYDepXToYRatio = 1
+  DepXToYRatio = 1
+  DepXToZRatio = 1
+  FrameAxis
+    {
+    Color = White
+    }
+$!ThreeDAxis 
+  XDetail
+    {
+    ShowAxis = No
+    RangeMin = -0.59999999999999998
+    RangeMax = 1.6000000000000001
+    GRSpacing = 0.5
+    TickLabel
+      {
+      Color = White
+      }
+    Gridlines
+      {
+      Color = White
+      }
+    MinorGridlines
+      {
+      Color = White
+      }
+    Title
+      {
+      Color = White
+      }
+    AxisLine
+      {
+      Color = White
+      Edge = 2
+      }
+    }
+$!ThreeDAxis 
+  YDetail
+    {
+    ShowAxis = No
+    RangeMin = -0.050000000000000003
+    RangeMax = 1.05
+    GRSpacing = 0.2
+    TickLabel
+      {
+      Color = White
+      }
+    Gridlines
+      {
+      Color = White
+      }
+    MinorGridlines
+      {
+      Color = White
+      }
+    Title
+      {
+      Color = White
+      }
+    AxisLine
+      {
+      Color = White
+      Edge = 3
+      }
+    }
+$!ThreeDAxis 
+  ZDetail
+    {
+    ShowAxis = No
+    RangeMin = -0.025000000000000001
+    RangeMax = 0.52500000000000002
+    GRSpacing = 0.2
+    TickLabel
+      {
+      Color = White
+      }
+    Gridlines
+      {
+      Color = White
+      }
+    MinorGridlines
+      {
+      Color = White
+      }
+    Title
+      {
+      Color = White
+      }
+    AxisLine
+      {
+      Color = White
+      Edge = 2
+      }
+    }
+$!IsoSurfaceAttributes  1
+  IsoSurfaceSelection = OneSpecificValue
+  Isovalue1 = 153.20584252
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Shade
+    {
+    Color = Red
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    SurfaceTranslucency = 60
+    UseTranslucency = Yes
+    }
+$!IsoSurfaceAttributes  2
+  ShowGroup = Yes
+  DefinitionContourGroup = 2
+  IsoSurfaceSelection = OneSpecificValue
+  Isovalue1 = 300185.715118
+  Isovalue2 = 169944.980713
+  Isovalue3 = 253432.630981
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    FloodColoring = Group2
+    Color = White
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!IsoSurfaceAttributes  3
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!IsoSurfaceAttributes  4
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!IsoSurfaceAttributes  5
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!IsoSurfaceAttributes  6
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!IsoSurfaceAttributes  7
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!IsoSurfaceAttributes  8
+  Isovalue1 = 117.547224164
+  Isovalue2 = 228.980406523
+  Isovalue3 = 340.413588881
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+$!SliceAttributes  1
+  PrimaryPosition
+    {
+    X = 1.01292234097
+    Y = 0.0186514648569
+    Z = 0.166666666667
+    I = 1
+    J = 1
+    K = 1
+    }
+  StartPosition
+    {
+    X = 0.829633267845
+    Y = 0.333333333333
+    Z = 0.166666666667
+    }
+  EndPosition
+    {
+    X = 0.175829308876
+    Y = 0.666666666667
+    Z = 0.333333333333
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = White
+    }
+  SliceConstraint
+    {
+    Include = No
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  2
+  SliceSurface = ZPlanes
+  PrimaryPosition
+    {
+    X = -0.493274206963
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  3
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  4
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  5
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  6
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  7
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!SliceAttributes  8
+  PrimaryPosition
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  StartPosition
+    {
+    X = -0.4
+    Y = 0.05
+    Z = 0.025
+    }
+  EndPosition
+    {
+    X = 1.4
+    Y = 0.95
+    Z = 0.475
+    }
+  Mesh
+    {
+    Color = White
+    }
+  Contour
+    {
+    Color = White
+    }
+  Vector
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = No
+    Color = White
+    }
+  SliceConstraint
+    {
+    Origin
+      {
+      X = 0.5
+      Y = 0.5
+      Z = 0.25
+      }
+    BoxDimension
+      {
+      X = 1
+      Y = 0.5
+      Z = 0.25
+      }
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 1.34135652226
+    Y = 0.9776957917070001
+    Z = 0.223417147228
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 1.13994657929
+    Y = 0.861702611635
+    Z = 0.220612498586
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.930102590017
+    Y = 0.731633234304
+    Z = 0.207944700339
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.8984093791360001
+    Y = 0.898892731913
+    Z = 0.403614361548
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.754315106668
+    Y = 0.878557869927
+    Z = 0.467837212236
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.582806056366
+    Y = 0.812468478416
+    Z = 0.5
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.383794387523
+    Y = 0.700477953591
+    Z = 0.5
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = 0.00488808425586
+    Y = 0.288248104842
+    Z = 0.289623197585
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = -0.123530599726
+    Y = 0.294075379955
+    Z = 0.372177780025
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!Streamtrace Add
+  StreamType = VolumeLine
+  StreamDirection = Both
+  StartPos
+    {
+    X = -0.291570799054
+    Y = 0.233775407758
+    Z = 0.408397196705
+    }
+  AltStartPos
+    {
+    X = -0.118126824555
+    Y = 0.266682638142
+    Z = 0.387494934648
+    }
+$!StreamAttributes 
+  TermLine
+    {
+    Color = White
+    }
+  StreamTiming
+    {
+    ShowMarkers = Yes
+    MarkColor = Multi
+    MarkSize = 1.25
+    TimeDelta = 0.000506609518371
+    TimeAnchor = 0.000962558084905
+    MarkSymbol
+      {
+      GeomShape = Sphere
+      }
+    }
+  RodRibbon
+    {
+    Width = 0.011
+    Mesh
+      {
+      Color = Custom1
+      }
+    }
+  Color = Custom1
+$!GlobalThreeD 
+  AxisScaleFact
+    {
+    X = 1
+    Y = 1
+    Z = 1
+    }
+  RotateOrigin
+    {
+    X = 0.5
+    Y = 0.5
+    Z = 0.25
+    }
+  LightSource
+    {
+    XYZDirection
+      {
+      X = -0.324074074074
+      Y = -0.277777777778
+      Z = 0.904331521449
+      }
+    Intensity = 75
+    BackgroundLight = 30
+    IncludeSpecular = Yes
+    }
+  LineLiftFraction = 0.2
+  SymbolLiftFraction = 0.6
+  VectorLiftFraction = 0.7
+  NearPlaneFraction = 0.1
+$!ThreeDView 
+  PSIAngle = 66.8599
+  ThetaAngle = -139.343
+  AlphaAngle = 0.0872825
+  ViewerPosition
+    {
+    X = 6.701771390193271
+    Y = 7.72110819404968
+    Z = 4.317957152496629
+    }
+  ViewWidth = 2.40613
+$!FieldLayers 
+  ShowMesh = No
+  ShowShade = Yes
+  UseTranslucency = Yes
+$!IsoSurfaceLayers 
+  Show = Yes
+$!SliceLayers 
+  Show = Yes
+$!StreamtraceLayers 
+  Show = Yes
+$!AttachText 
+  AnchorPos
+    {
+    X = 3.18181818182
+    Y = 89.67578314140378
+    }
+  TextShape
+    {
+    IsBold = No
+    Height = 20
+    }
+  Color = White
+  Box
+    {
+    Color = White
+    FillColor = Black
+    }
+  Text = 'You can animate streamtraces, slices or iso-surfaces\n'
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

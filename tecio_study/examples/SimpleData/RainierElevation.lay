@@ -1,0 +1,565 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"RainierElevation.plt"'
+$!VarSet |LFDSVL1| = '"X" "Y" "E"'
+$!SetStyleBase Factory
+$!CreateColorMap 
+  Name = 'Two Color__modified (1)'
+  NumControlPoints = 3
+  ControlPoint 1
+    {
+    ColorMapFraction = 0
+    LeadRGB
+      {
+      R = 0
+      G = 76
+      B = 43
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 0
+      B = 0
+      }
+    }
+  ControlPoint 2
+    {
+    ColorMapFraction = 0.5
+    LeadRGB
+      {
+      R = 127
+      G = 165
+      B = 149
+      }
+    TrailRGB
+      {
+      R = 127
+      G = 165
+      B = 149
+      }
+    }
+  ControlPoint 3
+    {
+    ColorMapFraction = 1
+    LeadRGB
+      {
+      R = 0
+      G = 0
+      B = 255
+      }
+    TrailRGB
+      {
+      R = 255
+      G = 255
+      B = 255
+      }
+    }
+$!BasicColor 
+  Custom37
+    {
+    R = 160
+    G = 200
+    }
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    A3
+      {
+      Width = 11.693
+      Height = 16.535
+      }
+    A4
+      {
+      Width = 8.2677
+      Height = 11.693
+      }
+    Custom1
+      {
+      Width = 9
+      Height = 11
+      TopHardClipOffset = 1.53
+      BottomHardClipOffset = 1.63
+      }
+    Custom2
+      {
+      Width = 11
+      Height = 8.5
+      LeftHardClipOffset = 1
+      RightHardClipOffset = 1
+      TopHardClipOffset = 1
+      BottomHardClipOffset = 1
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = No
+    ShowRuler = No
+    ShowPaper = Yes
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = -0.05
+      Y1 = -0.05
+      X2 = 11.05
+      Y2 = 8.55
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = Cartesian3D
+  IncludeText = No
+  IncludeGeom = No
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowBorder = No
+  BackgroundColor = Custom37
+  HeaderColor = Red
+  XYPos
+    {
+    X = 0
+    Y = 0
+    }
+  Width = 11
+  Height = 8.5
+$!PlotType  = Cartesian3D
+$!FrameName  = 'Mount Rainier'
+$!GlobalTime 
+  SolutionTime = 0
+$!ActiveFieldMaps  =  [1-2]
+$!GlobalRGB 
+  RangeMin = 0
+  RangeMax = 1
+$!GlobalContour  1
+  Var = 3
+  ColorMapName = 'Two Color__modified (1)'
+  DefNumLevels = 8
+  Legend
+    {
+    LabelIncrement = 500.2
+    }
+  ColorCutoff
+    {
+    RangeMin = 1242
+    RangeMax = 3326
+    }
+  ColorMapFilter
+    {
+    ColorMapDistribution = Continuous
+    ContinuousColor
+      {
+      CMin = 200
+      CMax = 4368
+      }
+    }
+$!ContourLevels New
+  ContourGroup = 1
+  RawData
+8
+0
+15
+1000
+1500
+1600
+2000
+2100
+2200
+$!GlobalContour  2
+  ColorMapName = 'Large Rainbow'
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  3
+  ColorMapName = 'Modern'
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  4
+  ColorMapName = 'GrayScale'
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  5
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  6
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  7
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalContour  8
+  ColorMapFilter
+    {
+    ContinuousColor
+      {
+      CMin = 0
+      CMax = 1
+      }
+    }
+$!GlobalThreeDVector 
+  UVar = 1
+  VVar = 2
+  WVar = 3
+  RelativeLength = 0.000975094272549
+$!FieldMap  [1]
+  Mesh
+    {
+    Color = Yellow
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Yellow
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Black
+    }
+  Scatter
+    {
+    Color = Yellow
+    }
+  Shade
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Yellow
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = KPlanes
+    }
+  VolumeMode
+    {
+    VolumeObjectsToPlot
+      {
+      ShowIsosurfaces = No
+      ShowSlices = No
+      ShowStreamtraces = No
+      }
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!FieldMap  [2]
+  Mesh
+    {
+    Color = Purple
+    }
+  Contour
+    {
+    ContourType = Flood
+    Color = Purple
+    UseLightingEffect = Yes
+    }
+  Vector
+    {
+    Color = Black
+    }
+  Scatter
+    {
+    Color = Purple
+    }
+  Shade
+    {
+    Color = White
+    }
+  EdgeLayer
+    {
+    Show = Yes
+    Color = Purple
+    }
+  Points
+    {
+    PointsToPlot = SurfaceNodes
+    }
+  Surfaces
+    {
+    SurfacesToPlot = KPlanes
+    }
+  VolumeMode
+    {
+    VolumeObjectsToPlot
+      {
+      ShowIsosurfaces = No
+      ShowSlices = No
+      ShowStreamtraces = No
+      }
+    }
+  Effects
+    {
+    LightingEffect = Gouraud
+    }
+$!ThreeDAxis 
+  XDetail
+    {
+    VarNum = 1
+    }
+  YDetail
+    {
+    VarNum = 2
+    }
+  ZDetail
+    {
+    VarNum = 3
+    }
+$!View Fit
+$!ThreeDAxis 
+  AxisMode = XYDependent
+  XYDepXToYRatio = 1
+  DepXToYRatio = 1
+  DepXToZRatio = 1
+$!ThreeDAxis 
+  XDetail
+    {
+    RangeMin = -0.44055599421300001
+    RangeMax = -0.437256003916
+    GRSpacing = 0.0005
+    AxisLine
+      {
+      Edge = 2
+      }
+    }
+$!ThreeDAxis 
+  YDetail
+    {
+    RangeMin = 0.166614001989
+    RangeMax = 0.170574003458
+    GRSpacing = 0.001
+    AxisLine
+      {
+      Edge = 3
+      }
+    }
+$!ThreeDAxis 
+  ZDetail
+    {
+    RangeMin = -186.90000000000001
+    RangeMax = 4584.8999999999996
+    GRSpacing = 1000
+    AxisLine
+      {
+      Edge = 3
+      }
+    }
+$!IsoSurfaceAttributes  1
+  Isovalue1 = 1242
+  Isovalue2 = 2284
+  Isovalue3 = 3326
+$!IsoSurfaceAttributes  2
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  3
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  4
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  5
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  6
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  7
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!IsoSurfaceAttributes  8
+  Isovalue1 = 1490.40002441
+  Isovalue2 = 2740.80004883
+  Isovalue3 = 3991.20007324
+$!SliceAttributes  1
+  PrimaryPosition
+    {
+    X = 0
+    Y = 0
+    Z = 0
+    I = 1
+    J = 1
+    K = 1
+    }
+  StartPosition
+    {
+    X = -9110.3
+    Y = -1491.70078125
+    Z = 490.080004883
+    }
+  EndPosition
+    {
+    X = -7495.7
+    Y = 673.68515625
+    Z = 4991.52009277
+    }
+  EdgeLayer
+    {
+    Show = No
+    }
+  SliceConstraint
+    {
+    Include = No
+    Origin
+      {
+      X = -8303
+      Y = -409.0078125
+      Z = 2740.800048828125
+      }
+    BoxDimension
+      {
+      X = 897
+      Y = 1202.9921875
+      Z = 2500.800048828125
+      }
+    }
+$!SliceAttributes  2
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  3
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  4
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  5
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  6
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  7
+  EdgeLayer
+    {
+    Show = No
+    }
+$!SliceAttributes  8
+  EdgeLayer
+    {
+    Show = No
+    }
+$!GlobalThreeD 
+  AxisScaleFact
+    {
+    X = 1.9487171
+    Y = 1.9487171
+    Z = 0.112602595251
+    }
+  RotateOrigin
+    {
+    X = -8291.20432868
+    Y = -260.03792501
+    Z = 2984.45753642
+    }
+  LightSource
+    {
+    XYZDirection
+      {
+      X = 0.6666666666666666
+      Y = -0.4444444444444444
+      Z = 0.5983516452371671
+      }
+    Intensity = 55
+    BackgroundLight = 45
+    IncludeSpecular = Yes
+    }
+  LineLiftFraction = 0.2
+  NearPlaneFraction = 0.1
+$!ThreeDView 
+  PSIAngle = 80.7427
+  ThetaAngle = -169.905
+  AlphaAngle = 3.67862
+  ViewerPosition
+    {
+    X = -4111.38094763
+    Y = 23482.738182
+    Z = 72255.62918069999
+    }
+  ViewWidth = 1504.2
+$!FieldLayers 
+  ShowMesh = No
+  ShowContour = Yes
+  ShowEdge = No
+$!StreamtraceLayers 
+  Show = No
+$!Linking 
+  BetweenFrames
+    {
+    LinkFrameSizeAndPosition = Yes
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config

@@ -56,6 +56,11 @@ int main()
     double *X = new double[NumNodes];
     double *Y = new double[NumNodes];
     double *Z = new double[NumNodes];
+    // point_1(0,0,0)
+    // point_2(1,1,2)
+    // point_3(2,0,0)
+    // point_4(2,2,0)
+    // point_5(0,2,0)
     X[0] = 0;
     Y[0] = 0;
     Z[0] = 0;

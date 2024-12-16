@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\yangkelong\\program_study\\openmp_study\\vs_with_openmp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3810D985-49FE-4A06-B7CE-55A1CF99D2D3}|vs_with_openmp\\vs_with_openmp.vcxproj|D:\\yangkelong\\program_study\\openmp_study\\vs_with_openmp\\vs_with_openmp\\\u6E90.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3810D985-49FE-4A06-B7CE-55A1CF99D2D3}|vs_with_openmp\\vs_with_openmp.vcxproj|solutionrelative:vs_with_openmp\\\u6E90.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u6E90.cpp",
+              "DocumentMoniker": "D:\\yangkelong\\program_study\\openmp_study\\vs_with_openmp\\vs_with_openmp\\\u6E90.cpp",
+              "RelativeDocumentMoniker": "vs_with_openmp\\\u6E90.cpp",
+              "ToolTip": "D:\\yangkelong\\program_study\\openmp_study\\vs_with_openmp\\vs_with_openmp\\\u6E90.cpp",
+              "RelativeToolTip": "vs_with_openmp\\\u6E90.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-16T08:44:11.306Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
